@@ -1,10 +1,9 @@
 ---
 marp: true
 theme: gaia
+class: lead
 paginate: true
 ---
-
-<!-- _class: lead -->
 
 # 🐍 Présentation de Django
 ### Framework Web Python Haut-niveau
@@ -159,7 +158,6 @@ path("articles/<int:id>/", views.detail)
 - Idéal pour les projets structurés (APIs, backoffice, SaaS)
 
 ---
-<!-- _class: lead -->
 
 ## 🙋 Questions ?
 
