@@ -1,8 +1,10 @@
 ---
 marp: true
-theme: default
+theme: gaia
 paginate: true
 ---
+
+<!-- _class: lead -->
 
 # 🐍 Présentation de Django
 ### Framework Web Python Haut-niveau
@@ -35,12 +37,23 @@ paginate: true
 
 ## 3. 🧱 Composants principaux
 
-### a. 🗂️ Models (ORM)
+### a. 🗂️ ORM: Object-Relational Mapping 
 
-- Déclarés via des classes Python
+- Models déclarés via des classes Python
 - Gèrent les tables SQL automatiquement
-- Exemples :
+
+---
+
+### Exemple :
   ```python
+  class Book(models.Model):
+    title = models.CharField(max_length=200)
+    author = models.CharField(max_length=100)
+    published_date = models.DateField()
+    isbn = models.CharField(max_length=13, unique=True)
+    cover = models.ImageField(blank=True)
+
+  # Ensuite une requête simple
   Book.objects.filter(author="Django")
   ```
 
@@ -54,15 +67,47 @@ paginate: true
   ```python
   def hello(request):
       return HttpResponse("Hello World")
+
+  # Ou bien une classe
+
+  class HelloWorldView(View):
+    def get(self, request):
+        return HttpResponse("Hello, World!")
   ```
 
 ---
 
 ### c. 🧾 Templates
 
-- Moteur intégré Django
+- Moteur intégré Django: Jinja
 - Syntaxe simple : `{% if %}`, `{% for %}`
 - Insertion de variables avec `{{ var }}`
+
+---
+
+#### Exemple
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Liste des livres</h1>
+    <ul>
+        {% for book in books %}
+            {% if book.pages > 100 %}
+                <li><strong>{{ book.title }}</strong> ({{ book.pages }} pages)</li>
+            {% else %}
+                <li>{{ book.title }} (court)</li>
+            {% endif %}
+        {% empty %}
+            <li>Aucun livre trouvé.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+```
 
 ---
 
@@ -78,23 +123,21 @@ path("articles/<int:id>/", views.detail)
 
 ---
 
-### e. 📝 Forms & Validation
+### e. 📝 Formulaire & Validation
 
 - `Form` = champs manuels
 - `ModelForm` = automatique depuis un modèle
 - Gestion des erreurs intégrée
 
-![width:60%](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/forms/django_form_example.png)
-
 ---
 
-### f. 🛠️ Admin Interface
+### f. 🛠️ Interface d'administration
 
 - CRUD automatique depuis les modèles
 - Interface prête à l’emploi
 - Customisable avec `ModelAdmin`
 
-![width:60%](https://static.djangoproject.com/img/screens/admin01.png)
+![bg right:50%](https://testdriven.io/static/images/blog/django/customize-django-admin/django-admin-custom-action.png)
 
 ---
 
@@ -111,12 +154,13 @@ path("articles/<int:id>/", views.detail)
 ## 5. ✅ Conclusion
 
 - 🔧 Structure claire, rapide à mettre en œuvre
-- 📚 Excellente documentation
+- 📚 Excellente documentation (disponible en Français)
 - 👥 Communauté large
 - Idéal pour les projets structurés (APIs, backoffice, SaaS)
 
 ---
+<!-- _class: lead -->
 
 ## 🙋 Questions ?
 
-Merci pour votre attention !
+**Merci pour votre attention !**

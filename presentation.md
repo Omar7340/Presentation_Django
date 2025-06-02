@@ -1,13 +1,12 @@
 ---
 marp: true
-theme: default
+theme: gaia
 class: lead
 paginate: true
 ---
 
 # Découvrir Django  
-### Créer des sites web avec Python  
-*Une introduction pour débutants, sans jargon !*
+### Créer des sites web avec Python
 
 ![bg right:40% h:600](https://static-00.iconduck.com/assets.00/django-icon-1606x2048-lwmw1z73.png)
 
@@ -18,8 +17,6 @@ paginate: true
 ➡️ Il y a des outils derrière ces sites  
 ➡️ **Django** est l’un d’eux  
 ➡️ Il permet de créer **rapidement** des sites web dynamiques, interactifs, sécurisés
-
-![bg right:40%](https://img.freepik.com/free-vector/static-website-concept-illustration_114360-2581.jpg)
 
 ---
 
@@ -35,7 +32,6 @@ paginate: true
   ✅ L’affichage dynamique des pages  
   ✅ L’organisation du code
 
-![bg right:40%](https://img.freepik.com/free-vector/tiny-developers-programming-website-internet-platform-flat-vector-illustration-cartoon-programmers-near-screen-with-open-code-script-software-development-digital-technology-concept_74855-10158.jpg)
 
 ---
 
@@ -47,13 +43,10 @@ paginate: true
 - 💼 Utilisé en entreprise :  
   Instagram, Spotify, Pinterest, Mozilla…
 
-![bg right:40%](https://img.freepik.com/free-vector/gradient-api-infographic_23-2149376752.jpg)
 
 ---
 
 ## 🍽️ Django, c’est comme un restaurant
-
-![bg right:40%](https://img.freepik.com/free-vector/restaurant-interior_1284-13523.jpg)
 
 - 👤 Le **client** (utilisateur) passe une commande  
 - 🌐 Django reçoit la **requête**  
@@ -73,7 +66,6 @@ Avec Django, on peut créer :
 - 🛍️ Un mini Leboncoin  
 - 📊 Une interface de gestion de données
 
-![bg right:40%](https://img.freepik.com/free-vector/online-blog-concept-illustration_114360-1035.jpg)
 
 ---
 
@@ -84,11 +76,8 @@ Avec Django, on peut créer :
 - Idéal pour apprendre et pour lancer de vrais projets
 - **Communauté active** et beaucoup de ressources
 
-![bg right:40%](https://img.freepik.com/free-vector/flat-design-rocket-launch-illustration_23-2149179195.jpg)
 
 ---
 
 # Merci !  
 **Des questions ?**
-
-![bg right:40%](https://img.freepik.com/free-vector/faq-concept-illustration_114360-5186.jpg)
